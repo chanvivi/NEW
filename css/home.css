@@ -20,11 +20,11 @@
     max-width: 50vw;
     padding: 0;
     margin: 0;
-    /* margin: auto; */
 }
 .about-section .about-section__img img{
     max-width: 100%;
     height: auto;
+    display: block;
 }
 .about-section .about-section__txt{
     max-width: 30rem;
@@ -166,11 +166,19 @@
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
+/* 手機板 針對 400px 寬度處理 */
+/* @media (max-width: 400px) {
+    .product-section .product-list .product-item {
+        width: 50%;
+    }
+} */
+
 /* 手機板 */
+
 @media (max-width: 768px){
     .about-section .about-section__img{
         max-width: 100%;
-        min-width: 300px;
+        /* min-width: 300px; */
     }
     .product-section_all .product-list_all .product-item .product-item__img {
         width: 300px;
