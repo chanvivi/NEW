@@ -172,6 +172,10 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr); /* 每行兩個商品 */
     }
+    .price-line .line{
+        margin-left: 0;
+        margin-right: 1rem;
+    }
 }
 
 /* 手機板 */
