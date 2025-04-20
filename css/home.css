@@ -167,18 +167,18 @@
 }
 
 /* 手機板 針對 400px 寬度處理 */
-/* @media (max-width: 400px) {
-    .product-section .product-list .product-item {
-        width: 50%;
+@media (max-width: 400px) {
+    .product-section .product-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 每行兩個商品 */
     }
-} */
+}
 
 /* 手機板 */
 
 @media (max-width: 768px){
     .about-section .about-section__img{
         max-width: 100%;
-        /* min-width: 300px; */
     }
     .product-section_all .product-list_all .product-item .product-item__img {
         width: 300px;
