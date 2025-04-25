@@ -13,8 +13,10 @@
     --main-text: #5a5047;    /* 主色 */
     --title-text: #a8827a;    /* 標題色 */
     --accent: #c5cbb7;    /* 其他色 */
-    --primary-color: #b73459;
-    --secondary-color: #f4e9ec;
+    --primary-color: #d89ca2; /* 主按鈕 */
+    --secondary-color: #b97985; /* 次按鈕 */
+    --price-btn: #888;
+    --shop: #ffffff;
     --line-color: rgba(197, 203, 183, 0.4); /* 裝飾線 */
   } 
 *{

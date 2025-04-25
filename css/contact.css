@@ -65,7 +65,7 @@
   }
 
   .contact-form form button:hover {
-    background-color: #d08d8d;
+    background-color: var(--secondary-color);
   }
 
   .contact-info h2 {
