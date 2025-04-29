@@ -13,7 +13,8 @@
     padding-top: 60px;
     padding: 40px 20px;
     transition: all 0.3s ease; /* 讓顯示和隱藏有平滑的過渡效果 */
-    overflow-y: auto;
+    /* overflow-y: auto; */
+    overflow: hidden; 
   }
   
   /* 顯示 */
@@ -27,7 +28,7 @@
     margin: auto;
     padding: 2rem;
     border: 1px solid #888;
-    width: 90%;
+    width: 66%;
     max-width: 90vw; /* 最大寬度 */
     border-radius: 1rem;
     display: flex;
@@ -36,8 +37,7 @@
     gap: 2rem;
 
     max-height: 90vh; /* 設定最大高度，不超過視窗 */
-    overflow-y: auto; /* 超出範圍時出現滾動條 */
-
+    overflow-y: auto;  /*超出範圍時出現滾動條 */ 
   }
     /* 關閉樣式 */
   .close {    
@@ -94,7 +94,6 @@
   .modal-right h2 {
     margin-bottom: 0.5rem;
     font-size: 1.5rem;
-    color: #333;
   }
     /* 價格 */
   .modal-price {
@@ -143,11 +142,21 @@
   /* 數字淡入淡出 */
   .quantity-display {
     font-size: 1.5rem;
+    width: 60px;
     margin: 0 1rem;
-    /* border: none; */
-    /* padding: 0.5rem 1rem; */
-    /* font-size: 1.2rem; */
-    /* cursor: pointer; */
+    padding: 0.25rem 0.5rem;
+    text-align: center; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+    appearance: textfield;
+}
+.quantity-display::-webkit-outer-spin-button,
+.quantity-display::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 /* 按鈕動態 */

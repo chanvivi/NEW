@@ -295,10 +295,10 @@
             <span class="close" onclick="closeModal()">&times;</span>
             <div class="modal-left">
                 <img src="img/index/goodssjpg.jpg" alt="大圖" class="large-img">
-                <div class="small-images">
-                    <img src="img/index/goods.jpg" alt="小圖1" class="small-img">
-                    <img src="img/index/good_s.jpg" alt="小圖2" class="small-img">
-                    <img src="img/index/good_s.jpg" alt="小圖3" class="small-img">
+                <div class="small-images thumbnails">
+                    <img src="img/index/goods.jpg" alt="小圖1" class="small-img thumbnail">
+                    <img src="img/index/good_s.jpg" alt="小圖2" class="small-img thumbnail">
+                    <img src="img/index/goodssjpg.jpg" alt="小圖3" class="small-img thumbnail">
                 </div>
             </div>
             <div class="modal-right">
@@ -314,7 +314,8 @@
                 <!-- 數量 -->
                 <div class="quantity-container">
                     <button class="quantity-button" id="decrease">-</button>
-                    <span class="quantity-display" id="quantity">1</span>
+                    <!-- <span class="quantity-display" id="quantity">1</span> -->
+                    <input type="number" id="quantity" class="quantity-display" value="1" min="1" />
                     <button class="quantity-button" id="increase">+</button>
                 </div>
                 <!-- 加入購物車 -->

@@ -3,7 +3,7 @@ function openModal(product) {
 
     // 每次打開 modal，數量重置，剩餘程式碼請看js/increaseQuantity.js
     quantity = 1;
-    quantityDisplay.textContent = quantity;
+    updateQuantityDisplay();
 
 
     // 取得所有資料
