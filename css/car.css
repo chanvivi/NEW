@@ -1,0 +1,153 @@
+@import 'share.css';
+/* 購物車容器 */
+#cart-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 1200px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#cart-container h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* 商品清單 */
+#cartItemsList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#cartItemsList li {
+  display: block;
+  padding: 15px 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+#cartItemsList img {
+  width: 60px;
+  height: auto;
+  margin-right: 15px;
+  aspect-ratio: 1;
+}
+
+#cartItemsList .item-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+#cartItemsList .item-details .item-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#cartItemsList .item-details .item-price {
+  font-size: 16px;
+}
+
+.cart-summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: var(--main-text);
+}
+
+#couponCode {
+  padding: 8px;
+  width: 150px;
+  margin-right: 10px;
+}
+
+.checkout {
+  padding: 0 10px;
+}
+
+/* 購物車側邊 */
+.cart-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background: white;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  transform: translateX(100%);
+  transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  z-index: 9999 !important;
+  overflow-y: auto;
+}
+
+.cart-sidebar.active {
+  transform: translateX(0) !important;
+}
+.empty-message {
+  text-align: center;
+  padding: 6rem;
+}
+
+.cart-sidebar .checkout-btn {
+  text-align: center;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+.cart-sidebar .checkout-btn:hover {
+  background-color: rgb(192, 128, 139);
+}
+
+.cart-item {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 10px 0;
+}
+
+.item-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.item-info img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.item-name {
+  color: var(--title-text);
+  font-weight: bold;
+}
+
+.item-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 10px;
+  color: var(--main-text);
+}
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: #888;
+  font-size: x-large;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: color 0.2s ease;
+}
+.delete-btn:hover {
+  color: var(--primary-color);
+}

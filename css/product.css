@@ -1,162 +1,162 @@
 @import 'share.css';
 /* 搜尋與分類篩選區域 */
 .search-filter {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    margin: 2rem auto;
-    max-width: 800px;
-  }
-  
-  .search-filter input,
-  .search-filter select {
-    padding: 0.6rem 1rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 0.5rem;
-    flex: 1 1 200px;
-  }
-  
-  /* 商品區塊 */
-  .product-grid {
-    display: grid;
-    gap: 2rem;
-    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem 0;
-    justify-items: center;
-  }
-  
-  .product-card {
-    border: 1px solid var(--line-color);
-    background-color: #fff;
-    border-radius: 1rem;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    text-align: center;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-    max-width: 300px;
-  }
-
-  .product-card p{
-    font-size: 1.2rem;
-    color: var(--primary-color);
-    font-weight: bold;
-  }
-  
-  .product-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .product-card img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-    display: block;
-  }
-  
-  .product-card h3 {
-    font-size: 1.1rem;
-    font-weight: bold;
-    margin: 1rem 0 0.5rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  
-  .product-card p {
-    font-size: 1rem;
-    color: var(--main-text);
-  }
-  .product-card .shop{
-    color: var(--shop);
-  }
-
-  .product-actions {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-  }
-  
-  .product-actions .btn {
-    flex: 1;
-    padding: 0.8rem 1.2rem;
-    font-size: 1rem;
-    font-size: bold;
-    font-family: var(--font-sans);
-    text-align: center;
-    background-color: var(--primary-color);
-    color: #fff;
-    border: none;
-    border-radius: 0 0 5px 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    padding: 10px 20px;
-    padding-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: .5rem;
-  }
-  
-  .product-actions .btn:hover {
-    background-color: var(--secondary-color);
-
-  }
-
-    .btn.add-to-cart {
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    cursor: pointer;
-  }
-  
-  .btn.add-to-cart:hover {
-    transform: scale(1.1);
-  }
-  
-  .btn.add-to-cart i {
-    transition: transform 0.3s ease;
-  }
-  
-  .btn.add-to-cart:hover i {
-    transform: rotate(20deg);
-  }
-
-  .product-card:hover {
-    transform: translateY(-10px); /* 懸停效果 */
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem auto;
+  max-width: 800px;
 }
-  
-  /* 手機板 針對 400px 寬度處理 */
+
+.search-filter input,
+.search-filter select {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  flex: 1 1 200px;
+}
+
+/* 商品區塊 */
+.product-grid {
+  display: grid;
+  gap: 2rem;
+  /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+  justify-items: center;
+}
+
+.product-grid .product-card {
+  border: 1px solid var(--line-color);
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  max-width: 300px;
+}
+
+.product-grid .product-card p {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.product-grid .product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-grid .product-card img {
+  width: 100%;
+  height: auto;
+  /* aspect-ratio: 4 / 3; */
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+}
+
+.product-grid .product-card h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 1rem 0 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.product-grid .product-card p {
+  font-size: 1rem;
+  color: var(--main-text);
+}
+.product-grid .product-card .shop {
+  color: var(--shop);
+}
+
+.product-actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.product-actions .btn {
+  flex: 1;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  font-size: bold;
+  font-family: var(--font-sans);
+  text-align: center;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 0 0 5px 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  padding: 10px 20px;
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.product-actions .btn:hover {
+  background-color: var(--secondary-color);
+}
+
+.btn.add-to-cart {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.btn.add-to-cart:hover {
+  transform: scale(1.1);
+}
+
+.btn.add-to-cart i {
+  transition: transform 0.3s ease;
+}
+
+.btn.add-to-cart:hover i {
+  transform: rotate(20deg);
+}
+
+.product-grid .product-card:hover {
+  transform: translateY(-10px); /* 懸停效果 */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 手機板 針對 400px 寬度處理 */
 @media (max-width: 400px) {
-    .search-filter{
-        margin: 2rem;
-    }
-    .product-grid{
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
+  .search-filter {
+    margin: 2rem;
+  }
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
 }
 
 /* 手機板 */
 
-@media (max-width: 768px){
-    .search-filter{
-        margin: 2rem;
-    }
-    .product-grid{
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
+@media (max-width: 768px) {
+  .search-filter {
+    margin: 2rem;
+  }
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
 }
 
 /* 平板 */
 @media (max-width: 1024px) {
-    .product-grid {
-      /* grid-template-columns: repeat(3, 1fr); */
-      padding: 2rem;
-    }
+  .product-grid {
+    /* grid-template-columns: repeat(3, 1fr); */
+    padding: 2rem;
   }
+}

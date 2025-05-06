@@ -2,192 +2,220 @@
 
 /* 遮罩 */
 .modal {
-    display: none; /* 預設隱藏 */
-    position: fixed;
-    z-index: 1001;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* 背景遮罩 */
-    padding-top: 60px;
-    padding: 40px 20px;
-    transition: all 0.3s ease; /* 讓顯示和隱藏有平滑的過渡效果 */
-    /* overflow-y: auto; */
-    overflow: hidden; 
-  }
-  
-  /* 顯示 */
-  .modal.show {
-    display: block;
-  }
-  
-  /* Modal 樣式 */
-  .modal-content {
-    background-color: #fff;
-    margin: auto;
-    padding: 2rem;
-    border: 1px solid #888;
-    width: 66%;
-    max-width: 90vw; /* 最大寬度 */
-    border-radius: 1rem;
-    display: flex;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-    position: relative; /*按鈕 */
-    gap: 2rem;
+  display: none; /* 預設隱藏 */
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 背景遮罩 */
+  padding-top: 60px;
+  padding: 40px 20px;
+  transition: all 0.3s ease; /* 讓顯示和隱藏有平滑的過渡效果 */
+  /* overflow-y: auto; */
+  overflow: hidden;
+}
 
-    max-height: 90vh; /* 設定最大高度，不超過視窗 */
-    overflow-y: auto;  /*超出範圍時出現滾動條 */ 
-  }
-    /* 關閉樣式 */
-  .close {    
-    position: absolute;    
-    top: 1.25rem;
-    right: 1.25rem;
-    cursor: pointer;
-    color: #999;
-    font-size: 1.5rem;
-  }  
-  .close:hover,
-  .close:focus {
-    color: #e76f6f;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  .modal-left,
-  .modal-right {
-    width: 100%;
-  }
-    /* 圖片樣式 */
-  .large-img {
-    width: 100%;
-    border-radius: 1rem;
-    object-fit: cover;
-    margin-bottom: 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: block;
-  }
-  
-  /* 小圖排版 */
-  .small-images {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 0.5rem;
-  }
-  
-  .small-img {
-    width: 32%;
-    cursor: pointer;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
-  
-  .small-img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* 商品信息 */
+/* 顯示 */
+.modal.show {
+  display: block;
+}
 
-  .modal-right h2 {
-    margin-bottom: 0.5rem;
-    font-size: 1.5rem;
-  }
-    /* 價格 */
-  .modal-price {
-    font-size: 1.25rem;
-  }
-  
-  /* 加購區域 */
-  .Shopping-cart {
-    margin-top: 1.5rem;
-  }
-  
-  /* 加入購物車 */
-  .shop-btn > button {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 100%;
-    gap: .5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .shop-btn > button:hover {
-    background-color: var(--secondary-color);
-  }
-  
-  /* 商品特色列表 */
-  .Shopping-cart ul {
-    margin-top: 1rem;
-    font-size: 14px;
-    color: #888;
-    margin-bottom: 5px;
-  }
-    /* 商品分類 */
-  .modal-category{
-    color: #888;
-  }
+/* Modal 樣式 */
+.modal-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 2rem;
+  border: 1px solid #888;
+  width: 66vw;
+  max-width: 90vw; /* 最大寬度 */
+  border-radius: 1rem;
+  display: flex;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  position: relative; /*按鈕 */
+  gap: 2rem;
 
-  /* 商品數量 */
-  /* 數字淡入淡出 */
-  .quantity-display {
-    font-size: 1.5rem;
-    width: 60px;
-    margin: 0 1rem;
-    padding: 0.25rem 0.5rem;
-    text-align: center; 
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  max-height: 90vh; /* 設定最大高度，不超過視窗 */
+  overflow-y: auto; /*超出範圍時出現滾動條 */
+}
+/* 關閉樣式 */
+.close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  cursor: pointer;
+  color: #999;
+  font-size: 1.5rem;
+}
+.close:hover,
+.close:focus {
+  color: #e76f6f;
+  text-decoration: none;
+  cursor: pointer;
+}
 
-    -moz-appearance: textfield;
-    -webkit-appearance: none;
-    appearance: textfield;
+.modal-left,
+.modal-right {
+  width: 100%;
+}
+/* 圖片樣式 */
+.largeImg img {
+  width: 100%;
+  border-radius: 1rem;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: block;
+  height: auto;
+  aspect-ratio: 1;
+}
+
+/* 小圖排版 */
+.small-images {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+.small-images:hover {
+  opacity: 1;
+}
+.small-images.active {
+  opacity: 1;
+}
+.small-img:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.small-img.active {
+  opacity: 1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.small-img {
+  width: 32%;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.small-images {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: all 0.3s;
+}
+
+/* 商品信息 */
+
+.modal-right h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+/* 價格 */
+.modal-price {
+  font-size: 1.25rem;
+}
+
+/* 加購區域 */
+.Shopping-cart {
+  margin-top: 1.5rem;
+}
+
+/* 加入購物車 */
+.shop-btn > button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  gap: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shop-btn > button:hover {
+  background-color: var(--secondary-color);
+}
+
+/* 商品特色列表 */
+.Shopping-cart ul {
+  margin-top: 1rem;
+  margin-bottom: 5px;
+  padding-left: 1rem;
+}
+.Shopping-cart li {
+  color: #888;
+  font-size: 14px;
+}
+/* 商品分類 */
+.modal-category {
+  color: #888;
+}
+
+/* 商品數量 */
+/* 數字淡入淡出 */
+.quantity-display {
+  font-size: 1.5rem;
+  width: 60px;
+  margin: 0 1rem;
+  padding: 0.25rem 0.5rem;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+  appearance: textfield;
 }
 .quantity-display::-webkit-outer-spin-button,
 .quantity-display::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 /* 按鈕動態 */
 .quantity-button {
-    border: none;
-    padding: 0.5rem 1rem;
-    font-size: 1.2rem;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: transform 0.1s ease;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.1s ease;
 }
 
 .quantity-button:active {
-    transform: scale(0.95); /* 點擊縮小 */
+  transform: scale(0.95); /* 點擊縮小 */
 }
 
-.quantity-container{
-    margin-bottom: 1rem;
+.quantity-container {
+  margin-bottom: 1rem;
 }
-  
-  @media (max-width: 768px) {
-    .modal-content {
-      width: 95%;
-      display: flex;
-      flex-direction: column;
-      /* gap: 0; */
-    }
-    .close{
-      top: 0.25rem;
-      right: 0.4rem;
-    }
 
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    /* gap: 0; */
   }
-  
+  .close {
+    top: 0.25rem;
+    right: 0.4rem;
+  }
+}
+
+/* 平板直立樣式 */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .modal-content {
+    width: 77vw;
+  }
+}
+/* 平板橫向、筆電樣式 */
+@media (min-width: 1024px) and (max-width: 1199px) {
+}

@@ -1,109 +1,107 @@
 @import 'share.css';
 
-
 .container {
-    max-width: 1080px;
-    margin: 0 auto;
-    padding: 60px 20px;
-  }
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
 
-  h1 {
-    text-align: center;
-    font-size: 2rem;
-    color: #8f5a5a;
-    margin-bottom: 10px;
-  }
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #8f5a5a;
+  margin-bottom: 10px;
+}
 
-  p.description {
-    text-align: center;
-    font-size: 1rem;
-    margin-bottom: 40px;
-    color: #6d5c56;
-  }
+p.description {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 40px;
+  color: #6d5c56;
+}
 
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.contact-form,
+.contact-info {
+  flex: 1 1 45%;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+}
+
+.contact-form form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.contact-form form input,
+.contact-form form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  background-color: #fffefc;
+}
+
+.contact-form form button {
+  background-color: #e4b6b6;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form form button:hover {
+  background-color: var(--secondary-color);
+}
+
+.contact-info h2 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #8f5a5a;
+}
+
+.contact-info p {
+  margin: 8px 0;
+  font-size: 0.95rem;
+}
+
+.map {
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.map iframe {
+  width: 100%;
+  height: 220px;
+  border: none;
+}
+
+/* 錯誤提示樣式 */
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+.input-error {
+  border-color: red;
+}
+
+@media (max-width: 768px) {
   .contact-section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    justify-content: space-between;
+    flex-direction: column;
   }
-
-  .contact-form,
-  .contact-info {
-    flex: 1 1 45%;
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    padding: 30px;
-  }
-
-  .contact-form form label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 500;
-  }
-
-  .contact-form form input,
-  .contact-form form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    margin-bottom: 20px;
-    font-size: 1rem;
-    background-color: #fffefc;
-  }
-
-  .contact-form form button {
-    background-color: #e4b6b6;
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-
-  .contact-form form button:hover {
-    background-color: var(--secondary-color);
-  }
-
-  .contact-info h2 {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    color: #8f5a5a;
-  }
-
-  .contact-info p {
-    margin: 8px 0;
-    font-size: 0.95rem;
-  }
-
-  .map {
-    margin-top: 20px;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-
-  .map iframe {
-    width: 100%;
-    height: 220px;
-    border: none;
-  }
-
-  /* 錯誤提示樣式 */
-  .error-message {
-      color: red;
-      font-size: 12px;
-      margin-top: 5px;
-  }
-  .input-error {
-      border-color: red;
-  }
-  
-
-  @media (max-width: 768px) {
-    .contact-section {
-      flex-direction: column;
-    }
-  }
+}

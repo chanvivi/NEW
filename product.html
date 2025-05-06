@@ -1,367 +1,435 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>所有商品｜摯愛花藝</title>
-    <link rel="stylesheet" href="css/product.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/product-popup.css">
-
-</head>
-<body>
-        <!-- 第一個部分 導覽列 -->
-<header class="navbar">
-    <div class="navbar__logo">
+    <link rel="stylesheet" href="css/product.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/product-popup.css" />
+    <link rel="stylesheet" href="css/car.css" />
+  </head>
+  <body>
+    <!-- 第一個部分 導覽列 -->
+    <header class="navbar">
+      <div class="navbar__logo">
         <a href="index.html">
-            <div class="logo">
-                <img src="img/index/logo.png" alt="回到首頁">
-            </div>
+          <div class="logo">
+            <img src="img/index/logo.png" alt="回到首頁" />
+          </div>
         </a>
-    </div>
-    <nav class="navbar__links">
-        <a href="index.html">首頁</a>
-        <a href="#" class="unfinished">所有商品</a>
-        <a href="#" class="unfinished">關於我們</a>
-        <a href="contact.html" >聯絡我們</a>
-        <a href="#" class="unfinished">購物車</a>
-    </nav>
-    
-    <!-- 手機漢堡 -->
-    <div class="navbar__toggle" id="navbar-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>    
-</header>
+      </div>
+      <div class="p">
+        <div class="navbar-list">
+          <nav class="navbar__links">
+            <a href="index.html">首頁</a>
+            <a href="product.html">所有商品</a>
+            <a href="#" class="unfinished">關於我們</a>
+            <a href="contact.html">聯絡我們</a>
+          </nav>
+          <a class="cart-link" id="cartLink">
+            <i class="fa fa-shopping-cart"></i>
+            <span id="cart-count" class="cart-count"></span>
+          </a>
+        </div>
+        <!-- 手機漢堡 -->
+        <div class="navbar__toggle" id="navbar-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
 
     <main class="product-page">
-        <div class="search-filter">
-          <input type="text" id="searchInput" placeholder="搜尋商品..." />
-          <select id="categoryFilter">
-            <option value="all">所有分類</option>
-            <option value="高級系列">高級系列</option>
-            <option value="經典系列">經典系列</option>
-            <option value="浪漫系列">浪漫系列</option>
-          </select>
-        </div>
-    
-        <div class="product-grid" id="productGrid">
-          <div class="product-card product" onclick="openModal(this)"
-               data-name="永恆契約｜經典紅玫瑰花束"
-               data-category="經典系列"
-               data-img="img/index/goodssjpg.jpg"
-               data-description="深紅色玫瑰象徵永不熄滅的愛戀，每一朵都是為你許下的真心承諾。"
-               data-price="NT$2500"
-               data-span="🌹 花材搭配：紅玫瑰＋白滿天星＋尤加利葉
+      <div class="search-filter">
+        <input type="text" id="searchInput" placeholder="搜尋商品..." />
+        <select id="categoryFilter">
+          <option value="all">所有分類</option>
+          <option value="高級系列">高級系列</option>
+          <option value="經典系列">經典系列</option>
+          <option value="浪漫系列">浪漫系列</option>
+        </select>
+      </div>
+
+      <div class="product-grid">
+        <!-- 商品 -->
+        <div
+          class="product-card product"
+          onclick="openModal(this)"
+          data-name="永恆契約｜經典紅玫瑰花束"
+          data-category="經典系列"
+          data-img="img/index/513.jpg"
+          data-description="深紅色玫瑰象徵永不熄滅的愛戀，每一朵都是為你許下的真心承諾。"
+          data-price="NT$1000"
+          data-span="🌹 花材搭配：紅玫瑰＋白滿天星＋尤加利葉
                📏 尺寸：中型／大型（21朵／33朵）
-               📦 保存方式：鮮花">
+               📦 保存方式：鮮花"
+        >
+          <img src="img/index/513.jpg" alt="紅玫瑰花束" />
+          <h3>永恆契約｜經典紅玫瑰花束</h3>
+          <p>$NT1000</p>
 
-            <img src="img/index/goodssjpg.jpg" alt="紅玫瑰花束" />
-            <h3>永恆契約｜經典紅玫瑰花束</h3>
-            <p>$NT2500</p>
-
-            <div class="product-actions">
-                <button class="btn add-to-cart"><i class="fa fa-shopping-cart"></i><p class="shop">加入購物車</p></button>
-            </div>
-              
+          <div class="product-actions">
+            <button class="btn add-to-cart">
+              <i class="fa fa-shopping-cart"></i>
+              <p class="shop">加入購物車</p>
+            </button>
           </div>
-          
-          <div class="product-card product" onclick="openModal(this)"
-               data-name="微光悸動｜粉裸玫瑰花束"
-               data-category="浪漫系列"
-               data-img="img/index/goods.jpg"
-               data-description="柔和的裸粉色，如同心動時悄悄綻放的微光，溫柔又悸動。"
-               data-price="$NT880"
-               data-span="🌹 主花材：裸粉玫瑰＋白蠟花＋銀葉菊
-               📏 尺寸：小型／中型（11朵／19朵）
-               📦 保存方式：鮮花或永生花（都可以）">
-            
-            <img src="img/index/goods.jpg" alt="微光悸動｜粉裸玫瑰花束" />
-            <h3>微光悸動｜粉裸玫瑰花束</h3>
-            <p>$NT880</p>
+        </div>
+        <!-- 商品 -->
+        <div
+          class="product-card product"
+          data-name="紅玫瑰｜熾戀序章"
+          onclick="openModal(this)"
+          data-category="經典系列"
+          data-img="img/index/mat.jpg"
+          data-description="「有些悸動，不需言語——只消一眼，已然淪陷。」
+          一抹熾紅，藏在精緻盒裝之中。
+          以經典紅玫瑰為主角，描繪心動初綻的那一刻，如愛情序幕悄然開啟。"
+          data-price="$NT1000"
+          data-span="🌹 主花材：紅玫瑰＋造型裝飾（依季節搭配花藝師選材）
+          📏 尺寸：盒裝（約高18cm × 寬22cm）
+          📦 保存方式：鮮花"
+        >
+          <img src="img/index/mat.jpg" alt="熾戀序章｜紅玫瑰花盒" />
+          <h3>熾戀序章｜紅玫瑰花盒</h3>
+          <p>$NT1000</p>
 
-            <div class="product-actions">
-                <button class="btn add-to-cart"><i class="fa fa-shopping-cart"></i><p class="shop">加入購物車</p></button>
-            </div>
-              
+          <div class="product-actions">
+            <button class="btn add-to-cart">
+              <i class="fa fa-shopping-cart"></i>
+              <p class="shop">加入購物車</p>
+            </button>
           </div>
-          
-          <div class="product-card product" 
-               data-name="月下初見｜白玫瑰花束"  onclick="openModal(this)"
-               data-category="高級系列" 
-               data-img="img/index/good_s.jpg" 
-               data-description="白玫瑰純淨無瑕，猶如月光下的初遇，美好而令人心醉。"
-               data-price="$NT660"
-               data-span="🌹 主花材：紅玫瑰 + 滿天星
+        </div>
+        <!-- 商品 -->
+        <div
+          class="product-card product"
+          data-name="月下初見｜白玫瑰花束"
+          onclick="openModal(this)"
+          data-category="經典系列"
+          data-img="img/index/513745.jpg"
+          data-description="白玫瑰純淨無瑕，猶如月光下的初遇，美好而令人心醉。"
+          data-price="$NT1000"
+          data-span="🌹 主花材：紅玫瑰 + 滿天星
                📏 尺寸：約長25cm × 寬18cm
-               📦 保存方式：常溫 / 乾燥陰涼處">
+               📦 保存方式：常溫 / 乾燥陰涼處"
+        >
+          <img src="img/index/513745.jpg" alt="月下初見｜白玫瑰花束" />
+          <h3>月下初見｜白玫瑰花束</h3>
+          <p>$NT1000</p>
 
-            <img src="img/index/good_s.jpg" alt="月下初見｜白玫瑰花束" />
-            <h3>月下初見｜白玫瑰花束</h3>
-            <p>$NT660</p>
-
-            <div class="product-actions">
-                <button class="btn add-to-cart"><i class="fa fa-shopping-cart"></i><p class="shop">加入購物車</p></button>
-            </div>
-              
+          <div class="product-actions">
+            <button class="btn add-to-cart">
+              <i class="fa fa-shopping-cart"></i>
+              <p class="shop">加入購物車</p>
+            </button>
           </div>
-
-          <div class="product-card product"
-               data-name="曖曖晨曦｜香檳玫瑰花束"  onclick="openModal(this)" 
-               data-category="浪漫系列"
-               data-img="img/index/goodssjpg.jpg" 
-               data-description="香檳色玫瑰輕輕訴說著溫柔晨光中的甜蜜祝福。"
-               data-price="$NT2000"
-               data-span="🌹 香檳玫瑰＋白米花＋小葉尤加利
-               📏 尺寸：中型（19～21朵）
-               📦 保存方式：鮮花">
-
-            <img src="img/index/goodssjpg.jpg" alt="紅玫瑰花束" />
-            <h3>曖曖晨曦｜香檳玫瑰花束</h3>
-            <p>$NT2000</p>
-
-            <div class="product-actions">
-                <button class="btn add-to-cart"><i class="fa fa-shopping-cart"></i><p class="shop">加入購物車</p></button>
-            </div>
-              
-          </div>
-
-          <div class="product-card product"  onclick="openModal(this)" 
-               data-name="逆光戀人｜漸層玫瑰花束" 
-               data-category="浪漫系列"
-               data-img="img/index/goods.jpg" 
-               data-description="漸層玫瑰如夕陽下閃耀的愛情，從羞澀到熾熱，緩緩盛放。"
-               data-price="$NT880"
-               data-span="🌹 主花材：粉色→深粉→紅色漸層玫瑰＋白滿天星
-               📏 尺寸：中型／大型（21朵／33朵）
-               📦 保存方式：鮮花">
-
-            <img src="img/index/goods.jpg" alt="逆光戀人｜漸層玫瑰花束" />
-            <h3>逆光戀人｜漸層玫瑰花束</h3>
-            <p>$NT880</p>
-
-            <div class="product-actions">
-                <button class="btn add-to-cart"><i class="fa fa-shopping-cart"></i><p class="shop">加入購物車</p></button>
-            </div>
-              
-          </div>
-
-          <div class="product-card product" 
-               data-name="此生摯愛｜99朵紅玫瑰花束"  onclick="openModal(this)"
-               data-category="經典系列" 
-               data-img="img/index/good_s.jpg" 
-               data-description="99朵紅玫瑰，寓意「長長久久」，為摯愛獻上最真摯的誓言。"
-               data-price="$NT690"
-               data-span="🌹 主花材：99朵紅玫瑰（無配花或少量尤加利葉）
-               📏 尺寸：超大型（99朵）
-               📦 保存方式：鮮花">
-
-            <img src="img/index/good_s.jpg" alt="此生摯愛｜99朵紅玫瑰花束" />
-            <h3>此生摯愛｜99朵紅玫瑰花束</h3>
-            <p>$NT690</p>
-
-            <div class="product-actions">
-                <button class="btn add-to-cart"><i class="fa fa-shopping-cart"></i><p class="shop">加入購物車</p></button>
-            </div>
-              
-          </div>
-
-          <div class="product-card product" 
-               data-name="晴空之約｜藍玫瑰花束"  onclick="openModal(this)" 
-               data-category="浪漫系列"
-               data-img="img/index/good_s.jpg" 
-               data-description="罕見的藍玫瑰，如同無垠晴空，象徵堅定而自由的愛"
-               data-price="$NT660"
-               data-span="🌹 主花材：藍玫瑰＋白滿天星
-               📏 尺寸：小型／中型（11朵／19朵）
-               📦 保存方式：鮮花或永生花（永生花更符合藍玫瑰稀有感）">
-
-            <img src="img/index/good_s.jpg" alt="晴空之約｜藍玫瑰花束" />
-            <h3>晴空之約｜藍玫瑰花束</h3>
-            <p>$NT660</p>
-
-            <div class="product-actions">
-                <button class="btn add-to-cart"><i class="fa fa-shopping-cart"></i><p class="shop">加入購物車</p></button>
-            </div>
-              
-          </div>
-
-          <div class="product-card product" onclick="openModal(this)" 
-               data-name="夢境予你｜紫玫瑰花束" 
-               data-category="經典系列"
-               data-img="img/index/goodssjpg.jpg" 
-               data-description="紫色玫瑰如同夢境，神秘又浪漫，是只屬於愛人的溫柔祝福。"
-               data-price="$NT2000"
-               data-span="🌹 主花材：紫玫瑰＋薰衣草＋銀葉菊
-               📏 尺寸：小型／中型（9朵／19朵）
-               📦 保存方式：永生花（主打「可以保存好幾年」的夢幻感）">
-
-            <img src="img/index/goodssjpg.jpg" alt="夢境予你｜紫玫瑰花束" />
-            <h3>夢境予你｜紫玫瑰花束</h3>
-            <p>$NT2000</p>
-
-            <div class="product-actions">
-                <button class="btn add-to-cart"><i class="fa fa-shopping-cart"></i><p class="shop">加入購物車</p></button>
-            </div>
-          </div>
-
-          <div class="product-card product"
-               data-name="逆光戀人｜漸層玫瑰花束"  onclick="openModal(this)" 
-               data-category="浪漫系列"
-               data-img="img/index/goods.jpg" 
-               data-description="漸層玫瑰如夕陽下閃耀的愛情，從羞澀到熾熱，緩緩盛放。"
-               data-price="$NT1000"
-               data-span="🌹 主花材：粉色→深粉→紅色漸層玫瑰＋白滿天星
-               📏 尺寸：中型／大型（21朵／33朵）
-               📦 保存方式：鮮花">
-
-            <img src="img/index/goods.jpg" alt="逆光戀人｜漸層玫瑰花束" />
-            <h3>逆光戀人｜漸層玫瑰花束</h3>
-            <p>$NT1000</p>
-
-            <div class="product-actions">
-                <button class="btn add-to-cart"><i class="fa fa-shopping-cart"></i><p class="shop">加入購物車</p></button>
-            </div>
-              
-          </div>
-
-          <div class="product-card product"
-               data-name="一吻定情｜心型玫瑰花束"  onclick="openModal(this)"
-               data-category="經典系列" 
-               data-img="img/index/good_s.jpg" 
-               data-description="用玫瑰編織成心型，傳遞「只屬於你」的濃烈情感。"
-               data-price="$NT660"
-               data-span="🌹 主花材：紅玫瑰為主＋白滿天星打底
-               📏 尺寸：中型（19朵以上，心型設計）
-               📦 保存方式：鮮花或永生花心型設計"
-               >
-            <div class="large-img"><img src="img/index/good_s.jpg" alt="一吻定情｜心型玫瑰花束" /></div>
-            <h3>一吻定情｜心型玫瑰花束</h3>
-            <p>$NT660</p>
-
-            <div class="product-actions">
-                <button class="btn add-to-cart"><i class="fa fa-shopping-cart"></i><p class="shop">加入購物車</p></button>
-            </div>
-              
-          </div>
-
         </div>
-      </main>          
-      
-      
+        <!-- 商品 -->
+        <div
+          class="product-card product"
+          data-name="曖曖晨曦｜香檳玫瑰花束"
+          onclick="openModal(this)"
+          data-category="經典系列"
+          data-img="img/index/4707.jpg"
+          data-description="香檳色玫瑰輕輕訴說著溫柔晨光中的甜蜜祝福。"
+          data-price="$NT1000"
+          data-span="🌹 香檳玫瑰＋白米花＋小葉尤加利
+               📏 尺寸：中型（19～21朵）
+               📦 保存方式：鮮花"
+        >
+          <img src="img/index/4707.jpg" alt="紅玫瑰花束" />
+          <h3>曖曖晨曦｜香檳玫瑰花束</h3>
+          <p>$NT1000</p>
+
+          <div class="product-actions">
+            <button class="btn add-to-cart">
+              <i class="fa fa-shopping-cart"></i>
+              <p class="shop">加入購物車</p>
+            </button>
+          </div>
+        </div>
+        <!-- 商品 -->
+        <div
+          class="product-card product"
+          onclick="openModal(this)"
+          data-name="微光悸動｜粉裸玫瑰花束"
+          data-category="浪漫系列"
+          data-img="img/index/goodssjpg.jpg"
+          data-description="柔和的裸粉色，如同心動時悄悄綻放的微光，溫柔又悸動。"
+          data-price="$NT880"
+          data-span="🌹 主花材：裸粉玫瑰＋白蠟花＋銀葉菊
+          📏 尺寸：小型／中型（11朵／19朵）
+          📦 保存方式：鮮花或永生花（都可以）"
+          data-thumbs="img/index/goodssjpg.jpg, img/index/garden.jpg, img/index/kravtsova.jpg"
+        >
+          <img src="img/index/goodssjpg.jpg" alt="微光悸動｜粉裸玫瑰花束" />
+          <h3>微光悸動｜粉裸玫瑰花束</h3>
+          <p>$NT880</p>
+
+          <div class="product-actions">
+            <button class="btn add-to-cart">
+              <i class="fa fa-shopping-cart"></i>
+              <p class="shop">加入購物車</p>
+            </button>
+          </div>
+        </div>
+        <!-- 商品 -->
+        <div
+          class="product-card product"
+          data-name="此生摯愛｜99朵紅玫瑰花束"
+          onclick="openModal(this)"
+          data-category="高級系列"
+          data-img="img/index/goods.jpg"
+          data-description="99朵紅玫瑰，寓意「長長久久」，為摯愛獻上最真摯的誓言。"
+          data-price="$NT690"
+          data-span="🌹 主花材：99朵紅玫瑰（無配花或少量尤加利葉）
+               📏 尺寸：超大型（99朵）
+               📦 保存方式：鮮花"
+          data-thumbs="img/index/goods.jpg, img/index/sonkaya.jpg, img/index/sanchez.jpg"
+        >
+          <img src="img/index/goods.jpg" alt="此生摯愛｜99朵紅玫瑰花束" />
+          <h3>此生摯愛｜99朵紅玫瑰花束</h3>
+          <p>$NT690</p>
+
+          <div class="product-actions">
+            <button class="btn add-to-cart">
+              <i class="fa fa-shopping-cart"></i>
+              <p class="shop">加入購物車</p>
+            </button>
+          </div>
+        </div>
+        <!-- 商品 -->
+        <div
+          class="product-card product"
+          data-name="戀空之約｜黃玫瑰花束"
+          onclick="openModal(this)"
+          data-category="經典系列"
+          data-img="img/index/larissafarber.jpg"
+          data-description="罕見的黃玫瑰，如同蛋黃般的夕陽，象徵堅定而自由的愛。"
+          data-price="$NT1000"
+          data-span="🌹 主花材：黃玫瑰
+               📏 尺寸：小型／中型（11朵／19朵）
+               📦 保存方式：鮮花）"
+          data-thumbs="img/index/larissafarber.jpg, img/index/unaizat97.jpg, img/index/nganduong (2).jpg"
+        >
+          <img src="img/index/larissafarber.jpg" alt="戀空之約｜黃玫瑰花束" />
+          <h3>戀空之約｜黃玫瑰花束</h3>
+          <p>$NT1000</p>
+
+          <div class="product-actions">
+            <button class="btn add-to-cart">
+              <i class="fa fa-shopping-cart"></i>
+              <p class="shop">加入購物車</p>
+            </button>
+          </div>
+        </div>
+        <!-- 商品 -->
+        <div
+          class="product-card product"
+          onclick="openModal(this)"
+          data-name="夢境予你｜紫玫瑰花束"
+          data-category="經典系列"
+          data-img="img/index/5178.jpg"
+          data-description="紫色玫瑰如同夢境，神秘又浪漫，是只屬於愛人的溫柔祝福。"
+          data-price="$NT1000"
+          data-span="🌹 主花材：紫玫瑰＋薰衣草＋銀葉菊
+               📏 尺寸：小型／中型（9朵／19朵）
+               📦 保存方式：永生花（主打「可以保存好幾年」的夢幻感）"
+        >
+          <img src="img/index/5178.jpg" alt="夢境予你｜紫玫瑰花束" />
+          <h3>夢境予你｜紫玫瑰花束</h3>
+          <p>$NT1000</p>
+
+          <div class="product-actions">
+            <button class="btn add-to-cart">
+              <i class="fa fa-shopping-cart"></i>
+              <p class="shop">加入購物車</p>
+            </button>
+          </div>
+        </div>
+        <!-- 商品 -->
+        <div
+          class="product-card product"
+          data-name="柔粉優雅｜浪漫粉白花束"
+          onclick="openModal(this)"
+          data-category="浪漫系列"
+          data-img="img/index/zabinski.jpg"
+          data-description="讓溫柔與典雅化作一束永不凋謝的祝福
+          以浪漫柔和的粉白色系為基調，融合多種細膩花材與質感包裝，展現細膩卻不浮誇的品味。"
+          data-price="$NT999"
+          data-span="🌹 主花材：永生康乃馨、永生玫瑰、粉色繡球花、白色滿天星。
+          📏 尺寸：高約 25 cm × 直徑約 20 cm（含花材整體）。
+          📦 保存方式：請置於乾燥通風處，避免陽光直射與潮濕。"
+          data-thumbs="img/index/zabinski.jpg, img/index/nganduong.jpg, img/index/jude.jpg"
+        >
+          <img src="img/index/zabinski.jpg" alt="柔粉優雅｜浪漫粉白花束" />
+          <h3>柔粉優雅｜浪漫粉白花束</h3>
+          <p>$NT999</p>
+
+          <div class="product-actions">
+            <button class="btn add-to-cart">
+              <i class="fa fa-shopping-cart"></i>
+              <p class="shop">加入購物車</p>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
     <!-- 第四個部分 聯絡我們-->
     <footer class="footer">
-        <div class="footer__content">
-          <div class="footer__brand">
-            <h2>摯愛花藝</h2>
-            <p>用心選物，傳遞生活的溫度。</p>
-          </div>
-      
-          <div class="footer__nav">
-            <h3>摯愛選購</h3>
-            <ul>
-              <li class="unfinished"><a href="#">關於我們</a></li>
-              <li class="unfinished"><a href="#">所有商品</a></li>
-              <li><a href="contact.html">聯絡我們</a></li>
-            </ul>
-          </div>
-          <div class="footer__txt">
-            <h3>服務條款</h3>
-            <p>條款及細項</p>
-            <p>運送和交付</p>
-            <p>隱私策略</p>
-            <p>訂製相關問題</p>
-          </div>
-          <div class="footer__contact">
-            <h3>聯絡資訊</h3>
-            <p>電話：+886-9xx-xxx-xxx</p>
-            <p>地址：403台中市西區林森路100巷</p>            
-            <p>Email: xxxxx@example.com</p>
-            <p>Instagram: <a href="*" target="_blank">@xxxxx</a></p>
-            <p>Facebook：Rose Story 花藝</p>
+      <div class="footer__content">
+        <div class="footer__brand">
+          <h2>摯愛花藝</h2>
+          <p>用心選物，傳遞生活的溫度。</p>
+        </div>
 
+        <div class="footer__nav">
+          <h3>摯愛選購</h3>
+          <ul>
+            <li><a href="#" class="unfinished">關於我們</a></li>
+            <li><a href="product.html">所有商品</a></li>
+            <li><a href="contact.html">聯絡我們</a></li>
+          </ul>
+        </div>
+        <div class="footer__txt">
+          <h3>服務條款</h3>
+          <p>條款及細項</p>
+          <p>運送和交付</p>
+          <p>隱私策略</p>
+          <p>訂製相關問題</p>
+        </div>
+        <div class="footer__contact">
+          <h3>聯絡資訊</h3>
+          <p>電話：+886-9xx-xxx-xxx</p>
+          <p>地址：403台中市西區林森路100巷</p>
+          <p>Email: xxxxx@example.com</p>
+          <p>Instagram: <a href="*" target="_blank">@xxxxx</a></p>
+          <p>Facebook：Rose Story 花藝</p>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2025 品牌名稱 All Rights Reserved.</p>
+        <span>本網站為學習用途之作品，無任何商業行為。</span>
+      </div>
+    </footer>
+
+    <!-- 購物車側邊 -->
+    <div id="cartSidebar" class="cart-sidebar">
+      <p id="emptyCartMessage" class="empty-message">購物車空囉～</p>
+      <ul id="cartItemsList"></ul>
+
+      <template id="cart-item-template">
+        <li>
+          <div class="cart-item">
+            <div class="item-info">
+              <img src="" alt="" class="item-img" />
+              <strong class="item-name"></strong>
+            </div>
+            <div class="item-detail">
+              <div class="item-detail2">
+                <span class="item-qty"></span>
+                <span class="item-price"></span>
+              </div>
+              <button class="delete-btn" data-index="">🗑</button>
+            </div>
           </div>
-        </div>
-      
-        <div class="footer__bottom">
-          <p>&copy; 2025 品牌名稱 All Rights Reserved.</p>
-          <span>本網站為學習用途之作品，無任何商業行為。</span>
-        </div>
-      </footer>
+        </li>
+      </template>
+
+      <!-- 結帳 -->
+      <div class="checkout" id="checkoutNo">
+        <a href="checkout.html"
+          ><button class="checkout-btn" id="checkoutBtn">結帳</button></a
+        >
+      </div>
+    </div>
+
     <!-- 商品視窗 -->
     <div id="productModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <div class="modal-left">
-                <img src="img/index/goodssjpg.jpg" alt="大圖" class="large-img">
-                <div class="small-images thumbnails">
-                    <img src="img/index/goods.jpg" alt="小圖1" class="small-img thumbnail">
-                    <img src="img/index/good_s.jpg" alt="小圖2" class="small-img thumbnail">
-                    <img src="img/index/goodssjpg.jpg" alt="小圖3" class="small-img thumbnail">
-                </div>
-            </div>
-            <div class="modal-right">
-                <h2 class="modal-title">紅玫瑰花束</h2>
-                <p class="modal-category">商品分類 / 玫瑰類</p>
-                <p class="modal-description"></p>                
-                <p class="modal-price">$1200</p>
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-left">
+          <div class="largeImg">
+            <img src="img/index/goodssjpg.jpg" alt="大圖" class="large-img" />
+          </div>
+          <div class="small-images thumbnails">
+            <img
+              src="img/index/goods.jpg"
+              alt="小圖1"
+              class="small-img thumbnail"
+            />
+            <img
+              src="img/index/good_s.jpg"
+              alt="小圖2"
+              class="small-img thumbnail"
+            />
+            <img
+              src="img/index/goodssjpg.jpg"
+              alt="小圖3"
+              class="small-img thumbnail"
+            />
+          </div>
+        </div>
+        <div class="modal-right">
+          <h2 class="modal-title">紅玫瑰花束</h2>
+          <p class="modal-category">商品分類 / 玫瑰類</p>
+          <p class="modal-description"></p>
+          <p class="modal-price">$1200</p>
 
-
-                        <!-- 數量與加入購物車 -->
-        <div class="Shopping-cart">
+          <!-- 數量與加入購物車 -->
+          <div class="Shopping-cart">
             <div class="shop-btn">
-                <!-- 數量 -->
-                <div class="quantity-container">
-                    <button class="quantity-button" id="decrease">-</button>
-                    <!-- <span class="quantity-display" id="quantity">1</span> -->
-                    <input type="number" id="quantity" class="quantity-display" value="1" min="1" />
-                    <button class="quantity-button" id="increase">+</button>
-                </div>
-                <!-- 加入購物車 -->
-                <button><i class="fa fa-shopping-cart"></i>加入購物車</button>
+              <!-- 數量 -->
+              <div class="quantity-container">
+                <button class="quantity-button" id="decrease">-</button>
+                <!-- <span class="quantity-display" id="quantity">1</span> -->
+                <input
+                  type="number"
+                  id="quantity"
+                  class="quantity-display"
+                  value="1"
+                  min="1"
+                />
+                <button class="quantity-button" id="increase">+</button>
+              </div>
+              <!-- 加入購物車 -->
+              <button id="addToCartBtn" class="add-to-cart">
+                <i class="fa fa-shopping-cart"></i>加入購物車
+              </button>
             </div>
 
             <ul class="data-span">
-                <li>顏色</li>
-                <li>尺寸</li>
-                <li>保存方式</li>
+              <li>顏色</li>
+              <li>尺寸</li>
+              <li>保存方式</li>
             </ul>
-
-            </div>
+          </div>
         </div>
+      </div>
     </div>
-    
-      <script src="js/menu.js"></script>
-      <script src="js/openModal.js"></script>
-      <script src="js/increaseQuantity.js"></script>
 
-      <script>
-        const searchInput = document.getElementById("searchInput");
-        const categoryFilter = document.getElementById("categoryFilter");
-        const productCards = document.querySelectorAll(".product-card");
-    
-        function filterProducts() {
-          const keyword = searchInput.value.toLowerCase();
-          const category = categoryFilter.value;
-    
-          productCards.forEach((card) => {
-            const name = card.dataset.name.toLowerCase();
-            const cat = card.dataset.category;
-    
-            const matchesKeyword = name.includes(keyword);
-            const matchesCategory = category === "all" || category === cat;
-    
-            if (matchesKeyword && matchesCategory) {
-              card.style.display = "block";
-            } else {
-              card.style.display = "none";
-            }
-          });
-        }
-    
-        searchInput.addEventListener("input", filterProducts);
-        categoryFilter.addEventListener("change", filterProducts);
-      </script>
-</body>
+    <!----------共用 檔案 ----------->
+    <script src="js/common/menu.js"></script>
+    <script src="js/common/updateCartCount.js"></script>
+    <!-- 購物車功能 -->
+    <script src="js/common/cart.js" defer></script>
+
+    <!----------特定 檔案 ----------->
+
+    <!-- 打開商品 -->
+    <script src="js/openModal.js"></script>
+    <!-- 購物車數量 -->
+    <script src="js/increaseQuantity.js"></script>
+    <!-- 商品搜尋與分類過濾功能 -->
+    <script src="js/searchAndSort.js"></script>
+    <script src="js/unfinished.js"></script>
+  </body>
 </html>

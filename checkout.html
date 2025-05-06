@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>結帳頁面｜摯愛花藝</title>
+    <link rel="stylesheet" href="css/checkout.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- 第一個部分 導覽列 -->
+    <header class="navbar">
+      <div class="navbar__logo">
+        <a href="index.html">
+          <div class="logo">
+            <img src="img/index/logo.png" alt="回到首頁" />
+          </div>
+        </a>
+      </div>
+      <div class="p">
+        <div class="navbar-list">
+          <nav class="navbar__links">
+            <a href="index.html">首頁</a>
+            <a href="product.html">所有商品</a>
+            <a href="#" class="unfinished">關於我們</a>
+            <a href="contact.html">聯絡我們</a>
+          </nav>
+          <a class="cart-link" id="cartLink">
+            <i class="fa fa-shopping-cart"></i>
+            <span id="cart-count" class="cart-count"></span>
+          </a>
+        </div>
+        <!-- 手機漢堡 -->
+        <div class="navbar__toggle" id="navbar-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- 當購物車為空 -->
+    <section class="empty-cart">
+      <img src="img/shopcat.jpg" alt="貓大人" />
+      <h2>你的購物車是空的 (｡•́︿•̀｡)</h2>
+      <p>記得加入商品到你的購物車喔！我們等你回來～</p>
+      <a href="product.html" class="shop-btn">繼續購物</a>
+    </section>
+
+    <main class="checkout-container">
+      <!-- 購物車摘要 -->
+      <section class="cart-summary">
+        <h2>購物車內容</h2>
+        <ul id="checkoutCartList"></ul>
+        <p class="checkout-Total">總金額：<span id="checkoutTotal">$0</span></p>
+      </section>
+
+      <!-- 購買人資訊 -->
+      <section class="buyer-info">
+        <h2>收件人資訊</h2>
+        <form id="checkoutForm">
+          <label>姓名：<input type="text" name="name" required /></label>
+          <label>電話：<input type="tel" name="phone" required /></label>
+          <label>Email：<input type="email" name="email" required /></label>
+          <label>地址：<input type="text" name="address" required /></label>
+
+          <!-- 配送方式 -->
+          <label
+            >配送方式：
+            <select name="shipping">
+              <option value="home">宅配</option>
+              <option value="store">超商取貨</option>
+            </select>
+          </label>
+
+          <!-- 付款方式 -->
+          <label
+            >付款方式：
+            <select name="payment">
+              <option value="credit">信用卡</option>
+              <option value="atm">ATM 轉帳</option>
+              <option value="cod">貨到付款</option>
+            </select>
+          </label>
+
+          <label>
+            <input type="checkbox" required /> 我已閱讀並同意服務條款
+          </label>
+
+          <button type="submit" class="checkout-btn">送出訂單</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- 第四個部分 聯絡我們-->
+    <footer class="footer">
+      <div class="footer__content">
+        <div class="footer__brand">
+          <h2>摯愛花藝</h2>
+          <p>用心選物，傳遞生活的溫度。</p>
+        </div>
+
+        <div class="footer__nav">
+          <h3>摯愛選購</h3>
+          <ul>
+            <li class="unfinished"><a href="#">關於我們</a></li>
+            <li class="unfinished"><a href="#">所有商品</a></li>
+            <li><a href="contact.html">聯絡我們</a></li>
+          </ul>
+        </div>
+        <div class="footer__txt">
+          <h3>服務條款</h3>
+          <p>條款及細項</p>
+          <p>運送和交付</p>
+          <p>隱私策略</p>
+          <p>訂製相關問題</p>
+        </div>
+        <div class="footer__contact">
+          <h3>聯絡資訊</h3>
+          <p>電話：+886-9xx-xxx-xxx</p>
+          <p>地址：403台中市西區林森路100巷</p>
+          <p>Email: xxxxx@example.com</p>
+          <p>Instagram: <a href="*" target="_blank">@xxxxx</a></p>
+          <p>Facebook：Rose Story 花藝</p>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2025 品牌名稱 All Rights Reserved.</p>
+        <span>本網站為學習用途之作品，無任何商業行為。</span>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const cartList = document.getElementById('checkoutCartList');
+        const totalElement = document.getElementById('checkoutTotal');
+
+        // 判斷購物車是否為空
+        if (cart.length === 0) {
+          document.querySelector('.empty-cart').style.display = 'block';
+          document.querySelector('.buyer-info').style.display = 'none';
+          document.querySelector('.cart-summary').style.display = 'none';
+          return; // 不繼續執行 renderCart 等後續流程
+        } else {
+          document.querySelector('.empty-cart').style.display = 'none';
+          document.querySelector('.buyer-info').style.display = 'block';
+          document.querySelector('.cart-summary').style.display = 'block';
+        }
+
+        // 計算總金額
+        let total = 0;
+
+        // 顯示購物車內容
+        function renderCart() {
+          cartList.innerHTML = '';
+          total = 0;
+
+          cart.forEach((item, index) => {
+            const li = document.createElement('li');
+            li.classList.add('cart-item');
+            li.innerHTML = `
+              <img src="${item.img}" alt="${item.name}" class="cart-item-image">
+              <div class="cart-item-info">
+                <div class="cart-item-name">${item.name}</div>
+                <div class="cart-item-details">${item.quantity} x ${item.price}</div>
+              </div>
+              <button class="delete-btn" data-index="${index}">🗑</button>
+            `;
+            cartList.appendChild(li);
+
+            const price = parseFloat(item.price.replace(/[^\d.]/g, '')) || 0;
+            total += price * item.quantity;
+          });
+
+          totalElement.textContent = `$${total.toFixed(2)}`;
+
+          // 🔁 在每次 render 完後，重新綁定刪除事件
+          const deleteButtons = document.querySelectorAll('.delete-btn');
+          deleteButtons.forEach(btn => {
+            btn.addEventListener('click', function () {
+              const index = this.getAttribute('data-index');
+              cart.splice(index, 1); // 刪除那筆項目
+              localStorage.setItem('cart', JSON.stringify(cart)); // 更新 localStorage
+              renderCart(); // 重新渲染
+
+              // 顯示購物車為空的提示
+              if (cart.length === 0) {
+                document.querySelector('.empty-cart').style.display = 'block';
+                document.querySelector('.buyer-info').style.display = 'none';
+                document.querySelector('.cart-summary').style.display = 'none';
+              }
+            });
+          });
+        }
+
+        const checkoutForm = document.getElementById('checkoutForm');
+        checkoutForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          if (!confirm('確認訂單資料無誤，是否送出訂單？')) {
+            return;
+          }
+          localStorage.removeItem('cart');
+          alert('訂單已送出！');
+          location.href = 'thankyou.html';
+        });
+
+        renderCart(); // 初始渲染購物車
+      });
+    </script>
+
+    <!-- 共用 檔案 -->
+    <script src="js/common/menu.js"></script>
+    <script src="js/common/updateCartCount.js"></script>
+
+  </body>
+</html>
