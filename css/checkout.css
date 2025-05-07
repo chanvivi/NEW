@@ -18,14 +18,22 @@
 }
 /* 刪除  car143*/
 .cart-summary .delete-btn {
-  background: transparent;
+  background: transparent; /* 去背 */
   border: none;
-  color: #888;
   font-size: x-large;
+  color: #888;
   cursor: pointer;
   margin-bottom: 5px;
+  margin-right: 5px;
   transition: color 0.2s ease;
 }
+
+.delete-btn svg {
+  width: 1.2rem;
+  height: auto;
+  object-fit: cover;
+}
+
 .cart-summary .delete-btn:hover {
   color: var(--primary-color);
 }

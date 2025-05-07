@@ -118,9 +118,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // 點垃圾桶就刪除該商品
   cartItemsList.addEventListener('click', function (e) {
-    if (e.target.classList.contains('delete-btn')) {
-      event.stopPropagation(); // 停止事件冒泡
-      const index = parseInt(e.target.getAttribute('data-index'));
+    const deleteBtn = e.target.closest('.delete-btn');
+    if (deleteBtn) {
+      e.stopPropagation(); // 停止事件冒泡
+      const index = parseInt(deleteBtn.getAttribute('data-index'));
       const cart = getCartData();
       cart.splice(index, 1); // 從陣列裡移除該項目
       saveCartToLocalStorage(cart);
