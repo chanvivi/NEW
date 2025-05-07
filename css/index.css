@@ -16,7 +16,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: 3.5rem 0;
+  padding: 6.5rem 0;
   /* gap: 2rem; */
   justify-content: space-around;
 }
@@ -230,6 +230,9 @@ footer {
 /* 手機板 */
 
 @media (max-width: 768px) {
+  .about-section {
+    padding: 3.5rem 0;
+  }
   .about-section .about-section__img {
     max-width: 100%;
   }
