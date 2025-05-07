@@ -239,4 +239,7 @@ footer {
   .product-list_all .product-item:nth-child(odd) .price-line {
     flex-direction: row-reverse;
   }
+  .about-section .about-section__txt h1 {
+    font-size: 2.5rem;
+  }
 }
