@@ -27,7 +27,7 @@
   border-bottom: 1px solid #ddd;
 }
 
-#cartItemsList img {
+#cartItemsList .item-info img {
   width: 60px;
   height: auto;
   margin-right: 15px;
@@ -138,16 +138,21 @@
   margin-top: 10px;
   color: var(--main-text);
 }
-
+.delete-btn svg {
+  width: 1.2rem;
+  height: auto;
+  object-fit: cover;
+}
 .delete-btn {
-  background: transparent;
+  background: transparent; /* 去背 */
   border: none;
-  color: #888;
   font-size: x-large;
+  color: #888;
   cursor: pointer;
   margin-top: 5px;
+  margin-right: 5px;
   transition: color 0.2s ease;
 }
-.delete-btn:hover {
+.delete-btn svg:hover {
   color: var(--primary-color);
 }
