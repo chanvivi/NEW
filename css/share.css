@@ -170,6 +170,14 @@ p {
   cursor: pointer;
   z-index: 1100;
 }
+.navbar__logo a {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: inherit; /* 文字顏色繼承 */
+}
 
 .navbar__toggle span {
   display: block;
