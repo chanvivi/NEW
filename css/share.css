@@ -249,4 +249,7 @@ p {
     display: block;
     padding-top: 0.2rem;
   }
+  .navbar__logo a {
+    width: 100%;
+  }
 }
