@@ -13,6 +13,7 @@
   <body>
     <!-- 第一個部分 導覽列 -->
     <header class="navbar">
+      <!--Logo -->
       <div class="navbar__logo">
         <a href="index.html">
           <div class="logo">
@@ -20,7 +21,8 @@
           </div>
         </a>
       </div>
-      <div class="p">
+      <div class="navbar__right">
+        <!-- 手機選單 -->
         <div class="navbar-list">
           <nav class="navbar__links">
             <a href="index.html">首頁</a>
@@ -28,10 +30,11 @@
             <a href="#" class="unfinished">關於我們</a>
             <a href="contact.html">聯絡我們</a>
           </nav>
-          <a class="cart-link" id="cartLink">
-            <i class="fa fa-shopping-cart"></i>
-            <span id="cart-count" class="cart-count"></span>
-          </a>
+        </div>
+        <!-- 購物車 -->
+        <div class="cart-link" id="cartLink">
+          <i class="fa fa-shopping-cart"></i>
+          <span id="cart-count" class="cart-count"></span>
         </div>
         <!-- 手機漢堡 -->
         <div class="navbar__toggle" id="navbar-toggle">
@@ -39,6 +42,7 @@
           <span></span>
           <span></span>
         </div>
+    </div>
       </div>
     </header>
 

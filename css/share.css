@@ -127,12 +127,16 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f5f5f5;
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 2rem;
+  width: 100%;
   position: sticky;
   top: 0;
   z-index: 99;
+  /* background-color: #f5f5f5; */
+  background-color: rgba(245, 245, 245, 0.7); /* 半透明 */
+  backdrop-filter: blur(10px); /* 毛玻璃效果 */
+  -webkit-backdrop-filter: blur(10px); /* Safari 支援 */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /*增加立體感 */
 }
 .navbar-list {
   display: flex;
@@ -140,8 +144,9 @@ p {
   align-items: center;
   gap: 1.5rem;
 }
-.p {
+.navbar__right {
   display: flex;
+  align-items: baseline;
   gap: 1.5rem;
 }
 
@@ -153,7 +158,7 @@ p {
 .navbar__links a {
   text-decoration: none;
   color: var(--main-text);
-  font-weight: 500;
+  /* font-weight: 400; */
   transition: color 0.3s;
 }
 
@@ -161,30 +166,11 @@ p {
   color: var(--accent);
 }
 
-.navbar__toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 25px;
-  height: 18px;
-  cursor: pointer;
-  z-index: 1100;
-}
-
 .navbar__logo img {
   width: 100%;
   display: block;
 }
 
-.navbar__toggle span {
-  display: block;
-  height: 3px;
-  width: 25px;
-  border-radius: 2px;
-  background-color: var(--main-text);
-  transition: all 0.3s ease;
-  margin-bottom: 5px;
-}
 /* 購物車數字 */
 .cart-link {
   position: relative;
@@ -208,41 +194,91 @@ p {
   display: none;
 }
 
-/* 打開後變叉叉 */
-.navbar__toggle.active span:nth-child(1) {
-  transform: rotate(45deg) translate(6px, 6px);
-}
-.navbar__toggle.active span:nth-child(2) {
-  opacity: 0;
-}
-.navbar__toggle.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
+.navbar__toggle {
+  display: none; /* 預設隱藏 */
 }
 
 /* 響應式 RWD */
 @media (max-width: 768px) {
+  .navbar {
+    position: sticky;
+    padding: 0.5rem 1rem;
+    background-color: #f5f5f5;
+    position: relative;
+  }
+
+  .navbar__logo .logo {
+    width: 80%;
+  }
+
+  .navbar__toggle {
+    display: flex; /*顯示 */
+    position: relative;
+    width: 24px;
+    height: 16px;
+    cursor: pointer;
+    z-index: 1100;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .navbar__toggle span {
+    position: absolute;
+    height: 1.5px;
+    width: 100%;
+    background-color: var(--main-text);
+    border-radius: 1px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  /* 初始位置 */
+  .navbar__toggle span:nth-child(1) {
+    transform: translateY(-7px);
+  }
+  .navbar__toggle span:nth-child(2) {
+    transform: translateY(0);
+    width: 60%;
+    right: 0;
+    position: absolute;
+  }
+  .navbar__toggle span:nth-child(3) {
+    transform: translateY(7px);
+  }
+
+  /* 打開後變叉叉 */
+  .navbar__toggle.active span:nth-child(1) {
+    transform: rotate(45deg);
+  }
+  .navbar__toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .navbar__toggle.active span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+
   .navbar__links {
+    will-change: transform, opacity; /* 預告瀏覽器，避免nav顫動 */
     position: absolute;
     top: 100%;
     right: 0;
+    left: 0;
     background-color: #f5f5f5;
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
     padding: 1rem 2rem;
-    display: none;
     width: 100%;
+
+    transform: translateY(-20px); /* 初始位置 */
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
   }
 
   .navbar__links.active {
-    display: flex;
-  }
-
-  .navbar__toggle {
-    display: block;
-    padding-top: 0.2rem;
-  }
-  .navbar__logo .logo {
-    width: 70%;
+    pointer-events: auto;
+    opacity: 1;
+    transform: translateY(0);
   }
 }

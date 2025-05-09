@@ -32,6 +32,8 @@
   height: auto;
   margin-right: 15px;
   aspect-ratio: 1;
+  border-radius: 8px;
+  border: 2px solid #c5cbb7;
 }
 
 #cartItemsList .item-details {

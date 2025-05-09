@@ -52,7 +52,6 @@ footer {
 }
 .cta-lead {
   font-size: 1.1em;
-  color: var(--title-text);
   margin-bottom: 16px;
   line-height: 1.6;
 }
