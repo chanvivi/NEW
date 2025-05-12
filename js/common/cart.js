@@ -32,11 +32,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const cart = getCartData();
     cartItemsList.innerHTML = ''; // 清空原本的列表
 
+    const checkoutBtn = document.getElementById('checkoutBtn'); //結帳按鈕
+
     // 如果購物車是空的，就顯示「購物車空囉～」
     if (cart.length === 0) {
       emptyCartMessage.style.display = 'block';
+      if (checkoutBtn) checkoutBtn.style.display = 'none'; //⬅️ 購物車空的時候隱藏按鈕
     } else {
       emptyCartMessage.style.display = 'none';
+      if (checkoutBtn) checkoutBtn.style.display = 'inline-block'; //⬅️ 有商品就顯示按鈕
       // 把每個商品一個一個插進來（最新的會排最上面）
       cart
         .slice()
