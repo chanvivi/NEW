@@ -14,6 +14,14 @@
   margin-bottom: 20px;
 }
 
+body .no-scroll {
+  overflow: hidden;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
 /* 商品清單 */
 #cartItemsList {
   list-style-type: none;

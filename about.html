@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>摯愛花藝</title>
+    <title>關於我們｜摯愛花一</title>
 
     <link
       rel="stylesheet"
@@ -12,9 +12,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/car.css" />
-    <link rel="stylesheet" href="css/product-popup.css" />
+    <link rel="stylesheet" href="css/about.css" />
   </head>
   <body>
     <!-- 第一個部分 導覽列 -->
@@ -51,258 +50,195 @@
       </div>
     </header>
 
-    <!-- 第二個部分 關於我們 -->
-    <section class="about-section">
-      <div class="about-section__img">
-        <img src="img/ad.png" alt="形象圖" />
-      </div>
-
-      <div class="about-section__txt">
-        <h1>Rose Story</h1>
+    <!-- Section 1 - 敘述 -->
+    <section class="intro">
+      <div class="intro-txt">
+        <h2>在靜默裡，讓花懂你。</h2>
         <p>
-          每一朵花，都是一段傾訴不出的深情。<br />
-          替你說出最難啟齒的心意，悄悄遞出那份「懂」。
+          摯愛花藝，相信花是一種語言，<br />
+          它能代替你說出不敢說的、說不出口的——愛、歉意、感謝、祝福。<br /><br />
+          我們為每一段情感注入細膩的設計，<br />
+          只為你送出的那一刻，成為永恆。
         </p>
-        <div class="cta">
-          <p class="cta-lead">
-            我們比誰都懂沒說出口的心事。<br />想知道摯愛怎麼偷偷懂你？
-          </p>
-          <a href="#" class="cta-btn">悄悄說</a>
-        </div>
+      </div>
+
+      <div class="intro-svg">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="503"
+          height="403"
+          viewBox="0 0 503 403"
+          fill="none"
+          display="block"
+          filter="blur(1px)"
+        >
+          <path
+            d="M136.996 204.805C192.974 291.461 111.64 380.46 58.8997 412.442"
+            stroke="#B8877D"
+            stroke-opacity="0.4"
+            stroke-width="0.5"
+            stroke-linecap="round"
+          />
+          <path
+            d="M138.748 207.106C160.281 128.011 134.693 83.0252 19.1696 4.15655M138.748 207.106C119.791 123.553 91.7868 79.3298 19.1696 4.15655M138.748 207.106C138.748 207.106 80.802 139.436 50.1451 97.0357C19.4883 54.6358 14.5249 1 14.5249 1C16.089 2.05825 17.6372 3.11038 19.1696 4.15655"
+            stroke="#B8877D"
+            stroke-opacity="0.3"
+            stroke-width="0.5"
+          />
+          <path
+            d="M347.775 353.072C293.242 313.824 266.092 314.338 225.714 357.889M347.775 353.072C294.43 336.783 268.031 339.009 225.714 357.889M347.775 353.072C347.775 353.072 308.923 365.588 284.002 370.019C259.08 374.451 224.1 359.645 224.1 359.645C224.64 359.052 225.178 358.467 225.714 357.889"
+            stroke="#B8877D"
+            stroke-opacity="0.4"
+            stroke-width="0.5"
+          />
+          <path
+            d="M158.707 373.844C204.841 345.915 217.348 360.15 226.505 360.512"
+            stroke="#B8877D"
+            stroke-opacity="0.4"
+            stroke-width="0.5"
+            stroke-linecap="round"
+          />
+          <path
+            d="M67.5 407.5C219 379.5 301.5 219.5 435 226"
+            stroke="#B8877D"
+            stroke-opacity="0.4"
+            stroke-width="0.5"
+          />
+          <path
+            d="M500.489 318C507.036 269.469 493.44 249.097 437.258 226.885M500.489 318C488.315 274.704 473.645 255.221 437.258 226.885M500.489 318C500.489 318 471.132 291.073 455.324 273.122C439.516 255.171 435 226 435 226C435.76 226.295 436.513 226.59 437.258 226.885"
+            stroke="#B8877D"
+            stroke-opacity="0.4"
+            stroke-width="0.5"
+          />
+        </svg>
       </div>
     </section>
 
-    <!-- 第三個部分 精選商品-->
-    <section class="product-section">
-      <div class="product-section__title"><h2>玫瑰</h2></div>
-      <div class="product-section__subtitle"><h3>精選商品</h3></div>
+    <!-- Section 2 - 核心信念 -->
+    <section class="core-values" aria-labelledby="core-values-heading">
+      <div class="core-container">
+        <h2>我們為什麼存在?</h2>
 
-      <div class="product-list">
-        <!-- 商品 -->
-        <div
-          class="product-item product"
-          onclick="openModal(this)"
-          data-name="夢境予你｜紫玫瑰花束"
-          data-category="經典系列"
-          data-img="img/index/5178.jpg"
-          data-description="紫色玫瑰如同夢境，神秘又浪漫，是只屬於愛人的溫柔祝福。"
-          data-price="$NT1000"
-          data-span="🌹 主花材：紫玫瑰＋薰衣草＋銀葉菊
-               📏 尺寸：小型／中型（9朵／19朵）
-               📦 保存方式：永生花（主打「可以保存好幾年」的夢幻感）"
-        >
-          <div class="product-item__img">
-            <img src="img/index/5178.jpg" alt="" />
-          </div>
-          <div class="product-item__info">
-            <p>紫玫瑰-夢境予你</p>
-            <span>$NT1000</span>
-          </div>
+        <div class="center-logo">
+          <img src="img/Group 20.png" alt="ROSE SHOP 標誌" loading="lazy" />
         </div>
 
-        <!-- 商品 -->
-        <div
-          class="product-item product"
-          onclick="openModal(this)"
-          data-name="永恆契約｜經典紅玫瑰花束"
-          data-category="經典系列"
-          data-img="img/index/513.jpg"
-          data-description="深紅色玫瑰象徵永不熄滅的愛戀，每一朵都是為你許下的真心承諾。"
-          data-price="NT$1000"
-          data-span="🌹 花材搭配：紅玫瑰＋白滿天星＋尤加利葉
-             📏 尺寸：中型／大型（21朵／33朵）
-             📦 保存方式：鮮花"
-        >
-          <div class="product-item__img">
-            <img src="img/index/513.jpg" alt="永恆契約｜經典紅玫瑰花束" />
-          </div>
-          <div class="product-item__info">
-            <p>紅玫瑰-永恆契約</p>
-            <span>$NT1000</span>
-          </div>
+        <!-- 三大理念 -->
+        <div class="value" id="value-artistry">
+          <p>花藝</p>
+          <span>Floral Artistry</span>
         </div>
 
-        <!-- 商品 -->
-        <div
-          class="product-item product"
-          data-name="曖曖晨曦｜香檳玫瑰花束"
-          onclick="openModal(this)"
-          data-category="經典系列"
-          data-img="img/index/4707.jpg"
-          data-description="香檳色玫瑰輕輕訴說著溫柔晨光中的甜蜜祝福。"
-          data-price="$NT1000"
-          data-span="🌹 香檳玫瑰＋白米花＋小葉尤加利
-               📏 尺寸：中型（19～21朵）
-               📦 保存方式：鮮花"
-        >
-          <div class="product-item__img">
-            <img src="img/index/4707.jpg" alt="香檳玫瑰-曖曖晨曦" />
-          </div>
-          <div class="product-item__info">
-            <p>香檳玫瑰-曖曖晨曦</p>
-            <span>$NT1000</span>
-          </div>
+        <div class="value" id="value-sincerity">
+          <p>真誠</p>
+          <span>Sincerity</span>
         </div>
 
-        <!-- 商品 -->
-        <div
-          class="product-item product"
-          data-name="紅玫瑰｜熾戀序章"
-          onclick="openModal(this)"
-          data-category="經典系列"
-          data-img="img/index/mat.jpg"
-          data-description="「有些悸動，不需言語——只消一眼，已然淪陷。」
-          一抹熾紅，藏在精緻盒裝之中。
-          以經典紅玫瑰為主角，描繪心動初綻的那一刻，如愛情序幕悄然開啟。"
-          data-price="$NT1000"
-          data-span="🌹 主花材：紅玫瑰＋造型裝飾（依季節搭配花藝師選材）
-          📏 尺寸：盒裝（約高18cm × 寬22cm）
-          📦 保存方式：鮮花"
-        >
-          <div class="product-item__img">
-            <img src="img/index/mat.jpg" alt="熾戀序章｜紅玫瑰" />
-          </div>
-          <div class="product-item__info">
-            <p>紅玫瑰｜熾戀序章</p>
-            <span>$NT1000</span>
-          </div>
+        <div class="value" id="value-heart">
+          <p>心意</p>
+          <span>From The Heart</span>
         </div>
 
-        <!-- 商品 -->
-        <div
-          class="product-item product"
-          data-name="戀空之約｜黃玫瑰花束"
-          onclick="openModal(this)"
-          data-category="經典系列"
-          data-img="img/index/larissafarber.jpg"
-          data-description="罕見的黃玫瑰，如同蛋黃般的夕陽，象徵堅定而自由的愛。"
-          data-price="$NT1000"
-          data-span="🌹 主花材：黃玫瑰
-               📏 尺寸：小型／中型（11朵／19朵）
-               📦 保存方式：鮮花）"
-          data-thumbs="img/index/larissafarber.jpg, img/index/unaizat97.jpg, img/index/nganduong (2).jpg"
-        >
-          <div class="product-item__img">
-            <img src="img/index/larissafarber.jpg" alt="戀空之約｜黃玫瑰花束" />
-          </div>
-          <div class="product-item__info">
-            <p>黃玫瑰｜戀空之約</p>
-            <span>$NT1000</span>
-          </div>
-        </div>
+        <!-- 光點 -->
+        <div class="glow-dot" id="glow"></div>
+      </div>
 
-        <!-- 商品 -->
-        <div
-          class="product-item product"
-          data-name="月下初見｜白玫瑰花束"
-          onclick="openModal(this)"
-          data-category="經典系列"
-          data-img="img/index/513745.jpg"
-          data-description="白玫瑰純淨無瑕，猶如月光下的初遇，美好而令人心醉。"
-          data-price="$NT1000"
-          data-span="🌹 主花材：紅玫瑰 + 滿天星
-               📏 尺寸：約長25cm × 寬18cm
-               📦 保存方式：常溫 / 乾燥陰涼處"
+      <div class="core-svg">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="1111"
+          height="722.64"
+          viewBox="0 0 1111 722.64"
+          fill="none"
+          class="__web-inspector-hide-shortcut__"
+          filter="blur(1px)"
         >
-          <div class="product-item__img">
-            <img src="img/index/513745.jpg" alt="柔粉優雅｜浪漫粉白花束" />
-          </div>
-          <div class="product-item__info">
-            <p>白玫瑰-月下初見</p>
-            <span>$NT1000</span>
-          </div>
-        </div>
+          <path
+            d="M-52.4177 730.475C276.524 516.004 212.05 25.3143 785.586 -19.163"
+            stroke="#B8877D"
+            stroke-opacity="0.4"
+            stroke-width="0.5"
+          />
+          <path
+            d="M25.4538 522.686C81.4315 609.343 0.098099 698.341 -52.6423 730.323"
+            stroke="#B8877D"
+            stroke-opacity="0.4"
+            stroke-width="0.5"
+            stroke-linecap="round"
+          />
+          <path
+            d="M27.2063 524.988C48.7393 445.893 23.1508 400.907 -92.3724 322.038M27.2063 524.988C8.24925 441.435 -19.7552 397.211 -92.3724 322.038M27.2063 524.988C27.2063 524.988 -30.74 457.317 -61.3969 414.917C-92.0537 372.517 -97.0171 318.882 -97.0171 318.882C-95.453 319.94 -93.9048 320.992 -92.3724 322.038"
+            stroke="#B8877D"
+            stroke-opacity="0.4"
+            stroke-width="0.5"
+          />
+          <path
+            d="M526.53 685.76C454.956 602.081 403.068 583.229 291.22 603.855M526.53 685.76C438.6 629.044 386.749 612.677 291.22 603.855M526.53 685.76C526.53 685.76 442.729 672.18 391.891 659.379C341.054 646.578 286.737 604.697 286.737 604.697C288.242 604.409 289.736 604.129 291.22 603.855"
+            stroke="#B8877D"
+            stroke-opacity="0.4"
+            stroke-width="0.5"
+          />
+          <path
+            d="M287.67 605.661C179.959 578.154 -36.3365 720.852 -52.6446 730.314"
+            stroke="#B8877D"
+            stroke-opacity="0.4"
+            stroke-width="0.5"
+            stroke-linecap="round"
+          />
+          <path
+            d="M488.017 321.72C384.433 281.431 341.162 293.491 294.517 379.955M488.017 321.72C395.838 317.711 354.479 332.201 294.517 379.955M488.017 321.72C488.017 321.72 430.971 357.846 392.891 375.258C354.812 392.669 292.659 383.435 292.659 383.435C293.279 382.261 293.899 381.101 294.517 379.955"
+            stroke="#B8877D"
+            stroke-opacity="0.3"
+            stroke-width="0.5"
+          />
+          <path
+            d="M193.805 433.241C256.132 369.415 282.055 387.038 296.871 383.827"
+            stroke="#B8877D"
+            stroke-opacity="0.3"
+            stroke-width="0.5"
+            stroke-linecap="round"
+          />
+        </svg>
+      </div>
+
+      <div class="leaves1-svg">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="69"
+          height="94"
+          viewBox="0 0 69 94"
+          fill="none"
+          class="__web-inspector-hide-shortcut__"
+          filter="blur(1px)"
+        >
+          <path
+            d="M66.4892 93C73.0363 44.4692 59.4404 24.0972 3.25825 1.88496M66.4892 93C54.3151 49.7036 39.6452 30.2214 3.25825 1.88496M66.4892 93C66.4892 93 37.132 66.0732 21.3242 48.122C5.5165 30.1707 1 1 1 1C1.76028 1.29536 2.51301 1.59032 3.25825 1.88496"
+            stroke="#B8877D"
+            stroke-opacity="0.4"
+            stroke-width="0.5"
+          />
+        </svg>
+      </div>
+
+      <div class="leaves2-svg">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="63"
+          height="59"
+          viewBox="0 0 63 59"
+          fill="none"
+          class="__web-inspector-hide-shortcut__"
+          filter="blur(1px)"
+        >
+          <path
+            d="M1.4285 58.3685C37.7223 58.0234 51.2238 45.8893 61.5582 2.32131M1.4285 58.3685C31.8969 44.8458 44.6318 32.0183 61.5582 2.32131M1.4285 58.3685C1.4285 58.3685 18.0665 33.9776 29.5577 20.4779C41.0489 6.97813 61.9678 0.570923 61.9678 0.570923C61.8318 1.15995 61.6952 1.74339 61.5582 2.32131"
+            stroke="#B8877D"
+            stroke-opacity="0.4"
+            stroke-width="0.5"
+          />
+        </svg>
       </div>
     </section>
-
-    <!-- 第三個部分 商品-->
-    <div class="product-section_all">
-      <div class="product-section__subtitle"><h3>所有商品</h3></div>
-
-      <div class="product-list_all">
-        <!-- 商品 -->
-        <div
-          class="product-item product-card product"
-          data-img="img/index/zabinski.jpg"
-          data-name="柔粉優雅｜浪漫粉白花束"
-          data-category="浪漫系列"
-          data-description="讓溫柔與典雅化作一束永不凋謝的祝福
-          以浪漫柔和的粉白色系為基調，融合多種細膩花材與質感包裝，展現細膩卻不浮誇的品味。"
-          data-price="NT$999"
-          data-span="🌹 主花材：永生康乃馨、永生玫瑰、粉色繡球花、白色滿天星。
-          📏 尺寸：高約 25 cm × 直徑約 20 cm（含花材整體）。
-          📦 保存方式：請置於乾燥通風處，避免陽光直射與潮濕。"
-          data-thumbs="img/index/zabinski.jpg, img/index/nganduong.jpg, img/index/jude.jpg"
-        >
-          <div class="product-item__img">
-            <img src="img/index/zabinski.jpg" alt="浪漫粉白花束" />
-          </div>
-          <div class="product-item__info">
-            <h4>柔粉優雅｜浪漫粉白花束</h4>
-            <p>
-              讓溫柔與典雅化作一束永不凋謝的祝福<br />
-              以浪漫柔和的粉白色系為基調，融合多種細膩花材與質感包裝，展現細膩卻不浮誇的品味。
-            </p>
-            <div class="price-line">
-              <span class="price">$NT999</span>
-              <div class="line"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 商品 -->
-        <div
-          class="product-item product-card product"
-          data-img="img/index/goods.jpg"
-          data-name="此生摯愛｜99朵紅玫瑰花束"
-          data-category="高級系列"
-          data-description="99朵紅玫瑰，寓意「長長久久」，為摯愛獻上最真摯的誓言。"
-          data-price="NT$690"
-          data-span="🌹 主花材：99朵紅玫瑰（無配花或少量尤加利葉）
-          📏 尺寸：超大型（99朵）
-          📦 保存方式：鮮花"
-          data-thumbs="img/index/goods.jpg, img/index/sonkaya.jpg, img/index/sanchez.jpg"
-        >
-          <div class="product-item__img">
-            <img src="img/index/goods.jpg" alt="此生摯愛｜99朵紅玫瑰花束" />
-          </div>
-          <div class="product-item__info">
-            <h4>此生摯愛｜99朵紅玫瑰花束</h4>
-            <p>99朵紅玫瑰，寓意「長長久久」，為摯愛獻上最真摯的誓言。</p>
-            <div class="price-line">
-              <span class="price">$NT690</span>
-              <div class="line"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 商品 -->
-        <div
-          class="product-item product-card product"
-          data-img="img/index/goodssjpg.jpg"
-          data-name="微光悸動｜粉裸玫瑰花束"
-          data-category="浪漫系列"
-          data-description="柔和的裸粉色，如同心動時悄悄綻放的微光，溫柔又悸動。"
-          data-price="NT$880"
-          data-span="🌹 主花材：裸粉玫瑰＋白蠟花＋銀葉菊
-          📏 尺寸：小型／中型（11朵／19朵）
-          📦 保存方式：鮮花或永生花（都可以）"
-          data-thumbs="img/index/goodssjpg.jpg, img/index/garden.jpg, img/index/kravtsova.jpg"
-        >
-          <div class="product-item__img">
-            <img src="img/index/goodssjpg.jpg" alt="" />
-          </div>
-          <div class="product-item__info">
-            <h4>微光悸動｜粉裸玫瑰花束</h4>
-            <p>柔和的裸粉色，如同心動時悄悄綻放的微光，溫柔又悸動。</p>
-            <div class="price-line">
-              <span class="price">$NT880</span>
-              <div class="line"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- 第四個部分 聯絡我們-->
     <footer class="footer">
@@ -430,70 +366,6 @@
       </div>
     </div>
 
-    <!-- 商品視窗 -->
-    <div id="productModal" class="modal">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <div class="modal-left">
-          <div class="largeImg">
-            <img src="img/index/goodssjpg.jpg" alt="大圖" class="large-img" />
-          </div>
-          <div class="small-images thumbnails">
-            <img
-              src="img/index/goods.jpg"
-              alt="小圖1"
-              class="small-img thumbnail"
-            />
-            <img
-              src="img/index/good_s.jpg"
-              alt="小圖2"
-              class="small-img thumbnail"
-            />
-            <img
-              src="img/index/goodssjpg.jpg"
-              alt="小圖3"
-              class="small-img thumbnail"
-            />
-          </div>
-        </div>
-        <div class="modal-right">
-          <h2 class="modal-title">紅玫瑰花束</h2>
-          <p class="modal-category">商品分類 / 玫瑰類</p>
-          <p class="modal-description"></p>
-          <p class="modal-price">$1200</p>
-
-          <!-- 數量與加入購物車 -->
-          <div class="Shopping-cart">
-            <div class="shop-btn">
-              <!-- 數量 -->
-              <div class="quantity-container">
-                <button class="quantity-button" id="decrease">-</button>
-                <!-- <span class="quantity-display" id="quantity">1</span> -->
-                <input
-                  type="number"
-                  id="quantity"
-                  class="quantity-display"
-                  value="1"
-                  min="1"
-                />
-                <button class="quantity-button" id="increase">+</button>
-              </div>
-              <!-- 加入購物車 -->
-              <button id="addToCartBtn" class="add-to-cart">
-                <i class="fa fa-shopping-cart"></i>加入購物車
-              </button>
-            </div>
-
-            <ul class="data-span">
-              <li>顏色</li>
-              <li>尺寸</li>
-              <li>保存方式</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!----------共用 檔案 ----------->
     <script src="js/common/menu.js"></script>
     <script src="js/common/updateCartCount.js"></script>
@@ -502,7 +374,7 @@
 
     <!----------特定 檔案 ----------->
     <script src="js/unfinished.js"></script>
-    <script src="js/openModal.js"></script>
     <script src="js/increaseQuantity.js"></script>
+    <script src="js/car.js"></script>
   </body>
 </html>

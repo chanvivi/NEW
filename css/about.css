@@ -1,0 +1,139 @@
+@import 'share.css';
+
+/* --Section 1 - 敘述  --*/
+.intro {
+  position: relative;
+  padding: 14rem 0;
+  text-align: center;
+  overflow: hidden;
+}
+.intro-txt {
+  max-width: 800px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.intro-txt h2 {
+  margin-bottom: 30px;
+  letter-spacing: 0.5rem;
+  font-weight: 500;
+}
+
+.intro-txt p {
+  line-height: 1.8;
+  letter-spacing: 0.2rem;
+}
+
+.intro-svg {
+  position: absolute;
+  bottom: 0;
+  right: 35%;
+  pointer-events: none; /* 這樣不會擋到按鈕或其他互動 */
+  z-index: -1; /* 避免蓋到主內容，可根據實際調整 */
+  opacity: 0.8;
+}
+
+/* -- Section 2 - 核心信念 --*/
+
+.core-values {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+}
+
+.core-svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  pointer-events: none; /* 這樣不會擋到按鈕或其他互動 */
+  z-index: -1; /* 避免蓋到主內容，可根據實際調整 */
+  opacity: 0.8;
+}
+.leaves1-svg {
+  position: absolute;
+  top: 20%;
+  right: 20%;
+  pointer-events: none; /* 這樣不會擋到按鈕或其他互動 */
+  z-index: -1; /* 避免蓋到主內容，可根據實際調整 */
+  opacity: 0.8;
+}
+.leaves2-svg {
+  position: absolute;
+  top: 80%;
+  right: 20%;
+  pointer-events: none; /* 這樣不會擋到按鈕或其他互動 */
+  z-index: -1; /* 避免蓋到主內容，可根據實際調整 */
+  opacity: 0.8;
+}
+
+.core-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: 6rem;
+}
+.core-container h2 {
+  letter-spacing: 0.5rem;
+  font-weight: 500;
+}
+
+.center-logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.value {
+  position: absolute;
+  text-align: center;
+  background-color: rgba(214, 186, 138, 0.5);
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+
+  box-shadow: inset 0 2px 8px rgba(255, 235, 215, 0.3),
+    /* Inner shadow */ 0 4px 12px rgba(174, 160, 144, 0.12); /* Drop shadow */
+}
+
+.value p {
+  font-size: 20px;
+  text-align: center;
+  color: #b8877d;
+  letter-spacing: 0.2rem;
+}
+.value span {
+  font-size: 13px;
+  color: #9e9e9e;
+}
+/* 三個點的位置需根據實際畫面微調 */
+#value-artistry {
+  top: 35%;
+  left: 30%;
+}
+#value-sincerity {
+  top: 35%;
+  left: 70%;
+}
+#value-heart {
+  top: 75%;
+  left: 50%;
+}
+
+.glow-dot {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: rgba(233, 215, 187, 0.9);
+  box-shadow: 0 0 20px rgba(233, 215, 187, 0.7);
+  z-index: 3;
+  pointer-events: none;
+}
