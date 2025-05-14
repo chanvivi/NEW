@@ -21,9 +21,28 @@
   font-weight: 500;
 }
 
+.intro-txt h2 span {
+  opacity: 0;
+  display: inline-block;
+  font-size: 1.5rem;
+  font-family: 'Noto Serif JP', serif;
+}
+
 .intro-txt p {
   line-height: 1.8;
   letter-spacing: 0.2rem;
+  display: inline-block;
+  margin-bottom: 1.5em;
+}
+
+.intro-txt p span {
+  display: inline-block;
+}
+
+.sentence {
+  display: inline-block;
+  opacity: 0;
+  transition: opacity 0.8s ease;
 }
 
 .intro-svg {
