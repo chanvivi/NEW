@@ -1,3 +1,15 @@
+// ------- 全域函式：控制 body 是否滾動 -------
+function updateBodyScrollLock() {
+  const cartSidebar = document.getElementById('cartSidebar');
+  const modal = document.getElementById('productModal');
+
+  const shouldLock =
+    (cartSidebar && cartSidebar.classList.contains('active')) ||
+    (modal && modal.classList.contains('show'));
+
+  document.body.classList.toggle('no-scroll', shouldLock);
+}
+
 // ------- 放在最外面（全域）-------
 function openModal(product) {
   quantity = 1;
@@ -57,12 +69,15 @@ function openModal(product) {
   document.querySelector('.modal-price').innerText = `${price}`;
 
   document.getElementById('productModal').classList.add('show');
-  document.body.style.overflow = 'hidden';
+  // document.body.style.overflow = 'hidden';
+  //document.body.classList.add('no-scroll'); // 禁止背景滾動
+  updateBodyScrollLock(); // 禁止背景滾動
 }
 
 function closeModal() {
   document.getElementById('productModal').classList.remove('show');
-  document.body.style.overflow = 'auto';
+  //document.body.classList.remove('no-scroll'); // 允許背景滾動
+  updateBodyScrollLock(); // 恢復背景滾動
 }
 
 // 初始化卡片點擊事件

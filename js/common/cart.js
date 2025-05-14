@@ -1,3 +1,15 @@
+// ------- 全域函式：控制 body 是否滾動 -------
+function updateBodyScrollLock() {
+  const cartSidebar = document.getElementById('cartSidebar');
+  const modal = document.getElementById('productModal');
+
+  const shouldLock =
+    (cartSidebar && cartSidebar.classList.contains('active')) ||
+    (modal && modal.classList.contains('show'));
+
+  document.body.classList.toggle('no-scroll', shouldLock);
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   // 先抓一些 HTML 裡會用到的元素
   const cartSidebar = document.getElementById('cartSidebar'); // 側邊的購物車區塊
@@ -87,6 +99,8 @@ document.addEventListener('DOMContentLoaded', function () {
       saveCartToLocalStorage(cart); // 存起來
       renderCart(); // 重新畫出來
       cartSidebar.classList.add('active'); // 打開側邊購物車
+      //document.body.classList.add('no-scroll'); // 禁止背景滾動
+      updateBodyScrollLock(); // 禁止背景滾動
     });
   }
 
@@ -96,6 +110,8 @@ document.addEventListener('DOMContentLoaded', function () {
       e.preventDefault(); // 阻止連結預設動作
       renderCart(); // 畫出購物車內容
       cartSidebar.classList.add('active'); // 打開側欄
+      //document.body.classList.add('no-scroll'); // 禁止背景滾動
+      updateBodyScrollLock(); // 禁止背景滾動
     });
   });
 
@@ -116,6 +132,8 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!isInsideSidebar) {
       // 點擊其他地方關掉
       sidebar?.classList.remove('active');
+      //document.body.classList.remove('no-scroll'); // 允許背景滾動
+      updateBodyScrollLock(); // 禁止背景滾動
       console.log('移除');
     }
   });
