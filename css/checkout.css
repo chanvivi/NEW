@@ -16,6 +16,11 @@
   margin: 3rem auto;
   color: var(--main-text);
 }
+
+.checkout-container {
+  padding: 7.5rem 0;
+}
+
 /* 刪除  car143*/
 .cart-summary .delete-btn {
   background: transparent; /* 去背 */

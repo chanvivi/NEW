@@ -40,6 +40,7 @@ p.description {
   display: block;
   margin-bottom: 8px;
   font-weight: 500;
+  color: var(--main-text);
 }
 
 .contact-form form input,
