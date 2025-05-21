@@ -28,19 +28,40 @@
   font-family: var(--font-sans);
   scroll-behavior: smooth;
   font-size: 16px;
+  letter-spacing: 0.8px;
 }
 body {
   background-color: var(--bg-color);
 }
+
 body .no-scroll {
   overflow: hidden;
 }
+/* 網頁連結小圖 */
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: var(--font-serif);
   color: var(--title-text);
+  line-height: 1.5;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.small-text,
+.note,
+.caption {
+  font-size: 0.85rem;
+  letter-spacing: 1.2px;
+}
+
+button,
+.btn {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  /* border-radius: 12px; */
 }
 
 h1 {

@@ -76,6 +76,11 @@ footer {
 }
 .product-section .product-section__subtitle {
   margin: 2rem 0;
+  display: flex;
+  gap: 0.5rem;
+}
+.product-section .product-section__subtitle img {
+  width: 15px;
 }
 .product-section .product-list {
   display: flex;
@@ -120,6 +125,11 @@ footer {
 /* 第二部分 - 所有商品 */
 .product-section_all .product-section__subtitle {
   margin: 2rem 0;
+  display: flex;
+  gap: 0.5rem;
+}
+.product-section_all .product-section__subtitle img {
+  width: 15px;
 }
 .product-section_all .product-list_all .product-item {
   display: flex;
